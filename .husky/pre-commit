@@ -1,0 +1,33 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Prettier fixes
+echo '';
+echo '⏳ Running Prettier fixes. Please wait...';
+npx prettier '**/*.{js,jsx,ts,tsx,json}' --write --loglevel error
+echo '✅ Prettier fixes done';
+
+# Typescript checks
+echo '';
+echo '⏳ Running Typescript checks. Please wait...';
+npx tsc --noEmit ||
+(
+  echo '❌ Typescript error(s) found. Please fix them before committing.';
+  false;
+)
+echo '✅ Typescript checks passed';
+
+# ESLint checks
+echo '';
+echo '⏳ Running ESLint checks. Please wait...';
+npx eslint --ext .js,.jsx,ts,tsx ||
+(
+  echo '❌ ESLint error(s) found. Please fix them before committing.';
+  false;
+)
+echo '✅ ESLint checks passed';
+
+# Ready to commit
+echo '';
+echo '🎊 Changes ready to be committed!';
+echo '';
