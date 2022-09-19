@@ -4,7 +4,7 @@
 # Prettier fixes
 echo '';
 echo '⏳ Running Prettier fixes. Please wait...';
-npx prettier '**/*.{js,jsx,ts,tsx,json}' '!./package.json' '!./package-lock.json' --write --loglevel error
+npx prettier --write . --loglevel error
 echo '✅ Prettier fixes done';
 
 # Typescript checks
