@@ -1,11 +1,15 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# Prettier fixes
+# Prettier checks
 echo '';
-echo '⏳ Running Prettier fixes. Please wait...';
-npx prettier --write . --loglevel error
-echo '✅ Prettier fixes done';
+echo '⏳ Running Prettier checks. Please wait...';
+npx prettier --check . --loglevel warn ||
+(
+  echo '❌ Prettier error(s) found. Please fix them before committing.';
+  false;
+)
+echo '✅ Prettier checks passed';
 
 # Typescript checks
 echo '';
