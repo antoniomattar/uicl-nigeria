@@ -3,7 +3,7 @@ import Link from 'next/link';
 // types
 import type { NextPage } from 'next';
 
-const ErrorPage: NextPage = () => {
+const ErrorPage: NextPage = (): JSX.Element => {
   return (
     <div className="mx-auto grid min-h-screen max-w-max place-items-center bg-white p-5">
       <div className="sm:flex">
