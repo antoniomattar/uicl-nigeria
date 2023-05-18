@@ -4,4 +4,3 @@ A boilerplate that I use for my Next.js projects, features:
 - 💎 Easy styling with TailwindCSS
 - 📏 Linting with ESlint
 - 💖 Code formatting with Prettier
-# uicl-nigeria
