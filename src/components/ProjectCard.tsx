@@ -16,12 +16,14 @@ export default function ProjectCard(props: any) {
       <div className="align-items: center max-w-xs overflow-hidden rounded shadow-lg">
         <Carousel images_list={props.project_img_list} />
         <div className="px-6 py-4">
-          <div className="mb-2 text-xl font-bold">{props.project_name}</div>
+          <div className="mb-2 text-xl font-bold text-blue-950">
+            {props.project_name}
+          </div>
           <p className="text-base text-gray-700">
             {project_infos.map((info) => (
-              <div className="flex justify-between">
-                <span className="font-bold">•{info[0]}: </span>
-                <span> &#160;{info[1]}</span>
+              <div className="flex">
+                <span className="text-left font-bold">•{info[0]}: </span>
+                <span className=" text-left"> &#160;{info[1]}</span>
               </div>
             ))}
           </p>

@@ -17,7 +17,8 @@ export default function Page() {
               Victoria Island, Lagos, Nigeria.
               <br />
               <br />
-              <strong>Telephone:</strong> +234 1 271 8954
+              <strong>Telephone:</strong>
+              <a href="tel:+234 1 271 8954">+234 1 271 8954</a>
               <br />
               <strong>Email:</strong>
             </p>

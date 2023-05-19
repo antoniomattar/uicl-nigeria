@@ -12,7 +12,7 @@ const project_list = [
     project_location: 'Festac, Lagos, Nigeria',
     project_scale: '14,000 m2',
     project_type: 'Commercial',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -23,18 +23,7 @@ const project_list = [
     project_location: 'Maltama, Abuja, Nigeria',
     project_scale: '9,000 m2',
     project_type: 'Residential',
-    project_status: 'Completed ✅',
-    project_tags: ['contractors', 'quality', 'construction'],
-  },
-  {
-    project_img_list: ['/cameroon-green-1.png', '/cameroon-green-2.png'],
-    project_name: 'Cameron Green',
-    project_client: 'UPDC',
-    project_consultant: 'PWO',
-    project_location: 'Ikoyl, Lagos, Nigeria',
-    project_scale: '10,000 m2',
-    project_type: 'Residential Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -45,7 +34,18 @@ const project_list = [
     project_location: 'Victoria Island, Lagos, Nigeria',
     project_scale: '2,000 m2',
     project_type: 'Financial Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
+    project_tags: ['contractors', 'quality', 'construction'],
+  },
+  {
+    project_img_list: ['/cameroon-green-1.png', '/cameroon-green-2.png'],
+    project_name: 'Cameron Green',
+    project_client: 'UPDC',
+    project_consultant: 'PWO',
+    project_location: 'Ikoyl, Lagos, Nigeria',
+    project_scale: '10,000 m2',
+    project_type: 'Residential Sector',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -60,7 +60,7 @@ const project_list = [
     project_location: 'Illupeju, Lagos, Nigeria',
     project_scale: '1,300 m2',
     project_type: 'Financial Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -75,7 +75,7 @@ const project_list = [
     project_location: 'Illupeju, Lagos, Nigeria',
     project_scale: '1,200 m2',
     project_type: 'Financial Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -90,7 +90,7 @@ const project_list = [
     project_location: 'Oyin Jolayemi street, Victoria Island, Lagos, Nigeria',
     project_scale: '2,500 m2',
     project_type: 'Financial Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -101,7 +101,7 @@ const project_list = [
     project_location: '10 Amodu Ojikutu Street, Victoria Island,Lagos, Nigeria',
     project_scale: '1,700 m2',
     project_type: 'Financial Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -112,7 +112,7 @@ const project_list = [
     project_location: 'Ikeja ,Lagos, Nigeria',
     project_scale: '1,000 m2',
     project_type: 'Financial Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -127,7 +127,7 @@ const project_list = [
     project_location: 'Victoria Island ,Lagos, Nigeria',
     project_scale: '----',
     project_type: 'Financial Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -138,7 +138,7 @@ const project_list = [
     project_location: 'Victoria Island ,Lagos, Nigeria',
     project_scale: '3,000 m2',
     project_type: 'Commercial Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -149,7 +149,7 @@ const project_list = [
     project_location: 'University of Lagos, Yaba , Nigeria',
     project_scale: '2,500 m2',
     project_type: 'Educational Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -160,7 +160,7 @@ const project_list = [
     project_location: 'Ikoyi ,Lagos, Nigeria',
     project_scale: '2,500 m2',
     project_type: 'Residential Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -171,7 +171,7 @@ const project_list = [
     project_location: 'Ikoyi ,Lagos, Nigeria',
     project_scale: '7,200 m2',
     project_type: 'Residential Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -185,7 +185,7 @@ const project_list = [
     project_location: 'Abeokuta, Ogun State, Nigeria',
     project_scale: '25,000 m2',
     project_type: 'Educational Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -196,7 +196,7 @@ const project_list = [
     project_location: 'Ibadan, Nigeria',
     project_scale: '3,000 m2',
     project_type: 'Medical Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -207,7 +207,7 @@ const project_list = [
     project_location: 'University of Lagos, Yaba, Nigeria',
     project_scale: '----',
     project_type: 'Educational Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -218,7 +218,7 @@ const project_list = [
     project_location: 'Ikoyi, Lagos, Nigeria',
     project_scale: '4,000 m2',
     project_type: 'Hospitality Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -229,7 +229,7 @@ const project_list = [
     project_location: 'Banana Island, Ikoyi, Lagos, Nigeria',
     project_scale: '2,500 m2',
     project_type: 'Hospitality Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
@@ -244,7 +244,7 @@ const project_list = [
     project_location: 'Ikoyi, Lagos, Nigeria',
     project_scale: '4,000 m2',
     project_type: 'Residential Sector',
-    project_status: 'Completed ✅',
+    project_status: 'Completed ',
     project_tags: ['contractors', 'quality', 'construction'],
   },
 ];
@@ -253,7 +253,7 @@ export default function Page() {
   return (
     <div>
       <NavBar />
-      <div className="flex h-fit flex-wrap justify-center">
+      <div className="flex h-fit flex-wrap justify-center bg-slate-50">
         {project_list.map((project) => (
           <ProjectCard {...project} />
         ))}

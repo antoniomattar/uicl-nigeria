@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 export default function NavBar() {
   return (
-    <div className="navbar bg-blue-950 text-yellow-600">
+    <div className="navbar bg-blue-950 text-orange-400">
       <div className="flex-1">
         <a href="/">
           <img
