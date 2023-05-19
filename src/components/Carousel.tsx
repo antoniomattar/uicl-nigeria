@@ -3,10 +3,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 export default function Carousel(props: any) {
   return (
-    <div className="max-h-md carousel-center carousel rounded-box max-w-md space-x-4 bg-neutral p-2">
+    <div className="carousel rounded-box w-80">
       {props.images_list.map((image: any) => (
-        <div className="carousel-item">
-          <img src={image} className="rounded-box h-40" />
+        <div className="carousel-item w-full">
+          <img src={image} className="w-full" />
         </div>
       ))}
     </div>
