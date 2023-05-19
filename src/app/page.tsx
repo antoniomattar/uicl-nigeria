@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-key */
-import Carousel from '@/components/Carousel';
 import Footer from '@/components/Footer';
 import ProjectCard from '@/components/ProjectCard';
 import NavBar from '../components/NavBar';
