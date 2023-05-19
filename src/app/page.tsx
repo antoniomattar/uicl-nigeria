@@ -154,7 +154,7 @@ const project_list = [
     project_tags: ['contractors', 'quality', 'construction'],
   },
   {
-    project_img_list: ['/cameron-garden-villas-1.png'],
+    project_img_list: ['/cameron-green-villas-1.png'],
     project_name: 'Cameron Greens Villas',
     project_client: 'UPDC',
     project_consultant: 'PWO',
