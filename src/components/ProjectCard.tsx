@@ -4,6 +4,13 @@
 import Carousel from './Carousel';
 
 export default function ProjectCard(props: any) {
+  const project_infos = [
+    ['Client', props.project_client],
+    ['Consultant', props.project_consultant],
+    ['Location', props.project_location],
+    ['Scale', props.project_scale],
+    ['Status', props.project_status],
+  ];
   return (
     <div className="max-w-fit p-3 ">
       <div className="align-items: center max-w-xs overflow-hidden rounded shadow-lg">
@@ -11,10 +18,12 @@ export default function ProjectCard(props: any) {
         <div className="px-6 py-4">
           <div className="mb-2 text-xl font-bold">{props.project_name}</div>
           <p className="text-base text-gray-700">
-            - CLIENT: {props.project_client} <br />- LOCATION:{' '}
-            {props.project_location} <br />- CONSULTANT:{' '}
-            {props.project_consultant} <br />- STATUS: {props.project_status}{' '}
-            <br />- SCALE: {props.project_scale} <br />
+            {project_infos.map((info) => (
+              <div className="flex justify-between">
+                <span className="font-bold">•{info[0]}: </span>
+                <span> &#160;{info[1]}</span>
+              </div>
+            ))}
           </p>
         </div>
         <div className="px-6 pb-2 pt-4">
