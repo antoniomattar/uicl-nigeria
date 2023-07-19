@@ -10,6 +10,7 @@ export default function ProjectCard(props: any) {
     ['Location', props.project_location],
     ['Scale', props.project_scale],
     ['Status', props.project_status],
+    ['Scope of Work', props.project_scope_of_work],
   ];
   return (
     <div className="max-w-fit p-3 ">
@@ -19,14 +20,14 @@ export default function ProjectCard(props: any) {
           <div className="mb-2 text-xl font-bold text-blue-950">
             {props.project_name}
           </div>
-          <p className="text-base text-gray-700">
+          <div className="text-base text-gray-700">
             {project_infos.map((info) => (
-              <div className="flex">
+              <div className="flex text-right">
                 <span className="text-left font-bold">•{info[0]}: </span>
-                <span className=" text-left"> &#160;{info[1]}</span>
+                &#160;{info[1]}
               </div>
             ))}
-          </p>
+          </div>
         </div>
         <div className="px-6 pb-2 pt-4">
           {props.project_tags.map((tag: any) => (

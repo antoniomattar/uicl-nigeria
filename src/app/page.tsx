@@ -13,7 +13,7 @@ const project_list = [
     project_scale: '14,000 m2',
     project_type: 'Commercial',
     project_status: 'Completed ',
-    project_tags: ['contractors', 'quality', 'construction'],
+    project_tags: ['mall', 'quality', 'construction'],
   },
   {
     project_img_list: ['/the-pinnacle-1.png'],

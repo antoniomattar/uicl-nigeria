@@ -5,10 +5,10 @@ export default function Page() {
   return (
     <div>
       <NavBar />
-      <div className="flex h-fit flex-wrap justify-center">
-        <div className="card shadow-lg">
+      <div className="m-7 flex h-fit flex-wrap justify-center ">
+        <div className="card bg-slate-300 shadow-lg">
           <div className="card-body">
-            <h2 className="card-title">Contact Us</h2>
+            <h2 className="card-title m-auto">Contact Us</h2>
             <p>
               <strong>United Integrated Construction Limited</strong>
               <br />
@@ -20,7 +20,8 @@ export default function Page() {
               <strong>Telephone:</strong>
               <a href="tel:+234 1 271 8954">+234 1 271 8954</a>
               <br />
-              <strong>Email:</strong>
+              <strong>E-mail: </strong>
+              <a href="mailto: uicl@cc.com">uicl@cc.com</a>
             </p>
           </div>
         </div>
