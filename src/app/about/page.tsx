@@ -8,9 +8,13 @@ export default function Page() {
       <div className="flex h-fit flex-wrap justify-center">
         <div className="card shadow-lg">
           <div className="card-body">
-            <h2 className="card-title m-auto text-center">About Us</h2>
-            <p>
-              <a className=" italic">United Integrated Construction Limited</a>
+            <h2 className="card-title m-auto pb-6 text-center text-4xl">
+              Who are we?
+            </h2>
+            <p className="m-auto leading-relaxed text-gray-700 sm:px-6 lg:px-24 xl:px-32">
+              <a className="italic text-blue-500">
+                United Integrated Construction Limited
+              </a>{' '}
               (UICL) is a building and construction firm with experience of
               working on selective residential, commercial and educational new
               build projects. UICL has been helping to build enduring
