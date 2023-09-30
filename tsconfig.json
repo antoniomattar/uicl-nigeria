@@ -30,6 +30,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "src/app/api/sendEmail.tsx"  ],
   "exclude": ["node_modules"]
 }

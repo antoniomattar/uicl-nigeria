@@ -1,17 +1,18 @@
 // pages/api/sendEmail.js
 import nodemailer from 'nodemailer';
 
-export default async function handler(req: any, res: any) {
+const sendEmail = async (req: any, res: any) => {
   if (req.method === 'POST') {
     try {
       const { name, email, message } = req.body;
 
       // Create a transporter with your email service credentials
       const transporter = nodemailer.createTransport({
-        service: 'Gmail', // e.g., 'Gmail'
+        host: 'smtp.gmail.com',
+        port: 587,
         auth: {
           user: 'antoniomattar123@gmail.com',
-          pass: 'Celtics10$$$',
+          pass: 'Celtics10$#@',
         },
       });
 
@@ -32,6 +33,8 @@ export default async function handler(req: any, res: any) {
       res.status(500).json({ message: 'Email sending failed' });
     }
   } else {
-    res.status(405).json({ message: 'Method not allowed' });
+    res.status(405).json({ message: 'Nfekho' });
   }
-}
+};
+
+export default sendEmail;

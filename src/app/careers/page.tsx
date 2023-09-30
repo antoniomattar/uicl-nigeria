@@ -20,7 +20,7 @@ const Careers = () => {
         },
         body: JSON.stringify({ name, email, position }),
       });
-      console.log('response', response);
+      console.log('response', response.ok);
 
       if (response.ok) {
         // Email sent successfully
