@@ -12,27 +12,25 @@ const Careers = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    const userData = {
+      name: name,
+      email: email,
+      position: position,
+      resume: resume,
+    };
     try {
       const response = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, position }),
+        body: JSON.stringify(userData),
       });
-      console.log('response', response.ok);
-
-      if (response.ok) {
-        // Email sent successfully
-        console.log('Email sent successfully');
-      } else {
-        // Email sending failed
-        console.error('Email sending failed');
-      }
+      console.log('Response:', response);
     } catch (error) {
       console.error('Error:', error);
     }
-    console.log('Form submitted with:', { name, email, resume });
+    console.log('Form submitted with:', userData);
   };
   const handleChangeResume = (e: any) => {
     const selectedFile = e.target.files[0];
@@ -99,7 +97,6 @@ const Careers = () => {
               onChange={handleChangeResume}
               className="w-full rounded border p-2"
               accept=".pdf,.doc,.docx"
-              required
             />
           </div>
           <button

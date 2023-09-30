@@ -1,10 +1,13 @@
 // pages/api/sendEmail.js
+import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-export async function POST(req: any) {
+export async function POST(req: NextRequest) {
   if (req.method === 'POST') {
     try {
-      const { name, email, message } = req.body;
+      const data = await req.json();
+      const { name, email, position, resume } = data;
+      console.log(data);
 
       // Create a transporter with your email service credentials
       const transporter = nodemailer.createTransport({
@@ -20,28 +23,24 @@ export async function POST(req: any) {
       const mailOptions = {
         from: 'antoniomattar123@gmail.com',
         to: 'antoniomattar123@gmail.com',
-        subject: 'New Submission',
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        subject: 'New Profile For UICL',
+        text: `Name: ${name} \n Email: ${email} \n Position: ${position} \n Resume: ${resume}`,
       };
 
       // Send the email
       await transporter.sendMail(mailOptions);
 
-      return {
-        status: 200,
-        body: JSON.stringify({ message: 'Email sent successfully' }),
-      };
+      return NextResponse.json(
+        { message: 'Email Sent Succesfully' },
+        { status: 200 }
+      );
     } catch (error) {
-      console.error(error);
-      return {
-        status: 500,
-        body: JSON.stringify({ message: 'Email sending failed' }),
-      };
+      return NextResponse.json(
+        { message: 'Email failed sending', error: error },
+        { status: 500 }
+      );
     }
   } else {
-    return {
-      status: 405,
-      body: JSON.stringify({ message: 'Nfekho' }),
-    };
+    return NextResponse.json({ error: 'Nfekho' }, { status: 405 });
   }
 }
