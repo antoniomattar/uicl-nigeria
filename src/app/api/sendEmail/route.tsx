@@ -1,7 +1,7 @@
 // pages/api/sendEmail.js
 import nodemailer from 'nodemailer';
 
-const sendEmail = async (req: any, res: any) => {
+export async function POST(req: any) {
   if (req.method === 'POST') {
     try {
       const { name, email, message } = req.body;
@@ -12,7 +12,7 @@ const sendEmail = async (req: any, res: any) => {
         port: 587,
         auth: {
           user: 'antoniomattar123@gmail.com',
-          pass: 'Celtics10$#@',
+          pass: 'mnts qbuf uuca emyi',
         },
       });
 
@@ -27,14 +27,21 @@ const sendEmail = async (req: any, res: any) => {
       // Send the email
       await transporter.sendMail(mailOptions);
 
-      res.status(200).json({ message: 'Email sent successfully' });
+      return {
+        status: 200,
+        body: JSON.stringify({ message: 'Email sent successfully' }),
+      };
     } catch (error) {
       console.error(error);
-      res.status(500).json({ message: 'Email sending failed' });
+      return {
+        status: 500,
+        body: JSON.stringify({ message: 'Email sending failed' }),
+      };
     }
   } else {
-    res.status(405).json({ message: 'Nfekho' });
+    return {
+      status: 405,
+      body: JSON.stringify({ message: 'Nfekho' }),
+    };
   }
-};
-
-export default sendEmail;
+}
