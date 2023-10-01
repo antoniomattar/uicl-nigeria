@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
 
@@ -11,6 +12,14 @@ export default function Page() {
             <h2 className="card-title m-auto pb-6 text-center text-4xl">
               Who are we?
             </h2>
+            <div className="flex justify-center">
+              <img
+                src="https://lh5.googleusercontent.com/p/AF1QipNGzfOm-MVidXqy2PqQu-zSvXNI8iL1lITljOWc=s1029-k-no"
+                alt="Our Offices"
+                width={500}
+              />
+            </div>
+
             <p className="m-auto leading-relaxed text-gray-700 sm:px-6 lg:px-24 xl:px-32">
               <a className="italic text-blue-500">
                 United Integrated Construction Limited

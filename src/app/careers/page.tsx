@@ -10,13 +10,21 @@ const Careers = () => {
   const [position, setPosition] = useState('');
   const [resume, setResume] = useState(null);
 
+  const toBase64 = (file: any) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+    });
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const userData = {
       name: name,
       email: email,
       position: position,
-      resume: resume,
+      resume: await toBase64(resume),
     };
     try {
       const response = await fetch('/api/sendEmail', {
@@ -26,7 +34,7 @@ const Careers = () => {
         },
         body: JSON.stringify(userData),
       });
-      console.log('Response:', response);
+      console.log('Response:', response.status);
     } catch (error) {
       console.error('Error:', error);
     }
@@ -96,7 +104,8 @@ const Careers = () => {
               id="resume"
               onChange={handleChangeResume}
               className="w-full rounded border p-2"
-              accept=".pdf,.doc,.docx"
+              accept=".pdf"
+              required
             />
           </div>
           <button

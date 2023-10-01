@@ -7,7 +7,6 @@ export async function POST(req: NextRequest) {
     try {
       const data = await req.json();
       const { name, email, position, resume } = data;
-      console.log(data);
 
       // Create a transporter with your email service credentials
       const transporter = nodemailer.createTransport({
@@ -15,16 +14,28 @@ export async function POST(req: NextRequest) {
         port: 587,
         auth: {
           user: 'antoniomattar123@gmail.com',
-          pass: 'mnts qbuf uuca emyi',
+          pass: 'efll qrup oamg onxg',
         },
       });
 
       // Setup email data
       const mailOptions = {
         from: 'antoniomattar123@gmail.com',
-        to: 'antoniomattar123@gmail.com',
+        to: 'jean.ad.mattar@gmail.com',
+        cc: 'antoniomattar123@gmail.com',
         subject: 'New Profile For UICL',
-        text: `Name: ${name} \n Email: ${email} \n Position: ${position} \n Resume: ${resume}`,
+        text: `
+        Hello Mr Jean, you have a new profile candidating:
+
+          Name: ${name}
+          Email: ${email}
+          Position: ${position}
+          Resume: (Attached in the mail)
+
+        Cordially,
+        Sent by AntoBot
+        `,
+        attachments: [{ filename: 'resume.pdf', path: resume }],
       };
 
       // Send the email
@@ -36,7 +47,7 @@ export async function POST(req: NextRequest) {
       );
     } catch (error) {
       return NextResponse.json(
-        { message: 'Email failed sending', error: error },
+        { message: 'Email failed sending', problem: error },
         { status: 500 }
       );
     }
