@@ -21,7 +21,8 @@ export async function POST(req: NextRequest) {
       // Setup email data
       const mailOptions = {
         from: 'antoniomattar123@gmail.com',
-        to: 'jean.ad.mattar@gmail.com',
+        to: 'antoniomattar123@gmail.com',
+        // to: 'jean.ad.mattar@gmail.com',
         cc: 'antoniomattar123@gmail.com',
         subject: 'New Profile For UICL',
         text: `
